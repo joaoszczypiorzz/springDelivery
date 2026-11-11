@@ -1,4 +1,4 @@
-package parkfy.com.parkfy_backend.dto.pageable;
+package joaoszczypior.com.SpringDelivery.dto.pageable;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -13,7 +13,7 @@ import org.springframework.data.domain.Sort.Direction;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public class FilterPageable{
+public class FilterPageable {
     @NotNull
     private Integer page;
     @NotNull
@@ -23,3 +23,4 @@ public class FilterPageable{
     @NotBlank
     private String orderBy;
 }
+

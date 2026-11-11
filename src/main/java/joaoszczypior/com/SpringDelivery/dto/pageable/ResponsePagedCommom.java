@@ -1,4 +1,4 @@
-package parkfy.com.parkfy_backend.dto.pageable;
+package joaoszczypior.com.SpringDelivery.dto.pageable;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -15,3 +15,4 @@ public class ResponsePagedCommom<T> {
     private int totalPages;
     private int pageSize;
 }
+
