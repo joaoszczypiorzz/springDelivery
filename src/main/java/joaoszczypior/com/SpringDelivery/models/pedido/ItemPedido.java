@@ -1,4 +1,4 @@
-package joaoszczypior.com.SpringDelivery.models;
+package joaoszczypior.com.SpringDelivery.models.pedido;
 
 
 import jakarta.persistence.Column;
@@ -46,3 +46,4 @@ public class ItemPedido {
     @Column(name = "preco_unitario", nullable = false)
     private BigDecimal precoUnitario;
 }
+

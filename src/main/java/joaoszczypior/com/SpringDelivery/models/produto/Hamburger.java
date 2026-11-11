@@ -24,3 +24,4 @@ public class Hamburger extends Produto {
         this.pontoCarne = pontoCarne;
     }
 }
+

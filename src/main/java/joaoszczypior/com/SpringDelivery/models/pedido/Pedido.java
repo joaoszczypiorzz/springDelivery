@@ -1,4 +1,4 @@
-package joaoszczypior.com.SpringDelivery.models;
+package joaoszczypior.com.SpringDelivery.models.pedido;
 
 
 import jakarta.persistence.Column;
@@ -9,7 +9,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import joaoszczypior.com.SpringDelivery.enums.StatusPedido;
+import joaoszczypior.com.SpringDelivery.enums.pedido.StatusPedido;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -37,3 +37,4 @@ public class Pedido {
     @Column(name = "status", nullable = false)
     private StatusPedido status;
 }
+

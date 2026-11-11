@@ -1,4 +1,4 @@
-package joaoszczypior.com.SpringDelivery.enums;
+package joaoszczypior.com.SpringDelivery.enums.pedido;
 
 
 
@@ -7,3 +7,4 @@ public enum StatusPedido {
     EM_ANDAMENTO,
     CONCLUIDO;
 }
+

@@ -37,3 +37,4 @@ public abstract class Produto {
     @Column(name = "tipo_produto", nullable = false, length = 50)
     private String tipoProduto;
 }
+

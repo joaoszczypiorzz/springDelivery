@@ -1,44 +1,44 @@
-package joaoszczypior.com.SpringDelivery.models;
+package joaoszczypior.com.SpringDelivery.models.entrega;
+
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
+import joaoszczypior.com.SpringDelivery.enums.entrega.StatusEntrega;
+import joaoszczypior.com.SpringDelivery.models.pedido.Pedido;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
-import java.math.BigDecimal;
-import java.time.LocalDateTime;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "tb_pagamento")
-public class Pagemento {
+@Table(name = "tb_entrega")
+public class Entrega {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_pagamento")
+    @Column(name = "id_entrega")
     private Long id;
 
     @OneToOne
     @JoinColumn(name = "id_pedido", nullable = false, unique = true)
     private Pedido pedido;
 
-    @Column(name = "valor_pago", nullable = false)
-    private BigDecimal valorPago;
+    @Column(name = "endereco_entrega", nullable = false)
+    private String endereco;
 
-    @Column(name = "metodo_pagamento", nullable = false, length = 100)
-    private String metodoPagamento;
-
-    @Column(name = "data_pagamento", nullable = false)
-    private LocalDateTime dataPagamento;
+    @Enumerated(EnumType.STRING)
+    @Column(name = "status_entrega", nullable = false)
+    private StatusEntrega status;
 }
